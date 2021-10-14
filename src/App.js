@@ -3,6 +3,8 @@ import './App.css';
 import { Header } from './components/header';
 import { Content } from './components/content';
 import { Footer } from './components/footer';
+import { Create } from './components/create';
+import {Read} from './components/read';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import{Navbar, Nav} from 'react-bootstrap';
 import{BrowserRouter as Router,Switch,Route} from 'react-router-dom';
@@ -17,6 +19,8 @@ function App() {
             <Nav.Link href="/">Content</Nav.Link>
             <Nav.Link href="/header">Header</Nav.Link>
             <Nav.Link href="/footer">Footer</Nav.Link>
+            <Nav.Link href="/read">Read</Nav.Link>
+            <Nav.Link href="/create">Create</Nav.Link>
           </Nav>
       </Navbar>
 
@@ -26,6 +30,8 @@ function App() {
       <Route path="/" component={Content} exact/>
       <Route path="/header" component={Header} exact/>
       <Route path="/footer" component={Footer} exact/>
+      <Route path="/read" component={Read} exact/>
+      <Route path="/create" component={Create} exaxt/>
     </Switch>
     </div>
     </Router>
